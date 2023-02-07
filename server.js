@@ -41,15 +41,6 @@ app.use('/api/orders', require('./routes/orders'))
 app.use('/api/stripe', require('./routes/stripe'))
 app.use('/api/razorpayment', require('./routes/razorpay'))
 
-// app.use(express.static(path.join(__dirname, "./client/build")));
-
-// app.get('*', (_, res) => {
-//   res.sendFile(path.join(__dirname, './client/build/index.html'));
-// });
-
 app.listen(process.env.PORT || 5000, ()=>{
 	console.log(`app conneced`.brightCyan)
 })
-
-// Export the Express API
-module.exports = app;
