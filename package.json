@@ -1,0 +1,43 @@
+{
+  "name": "akshop",
+  "version": "1.0.0",
+  "description": "fullstack e-commerce website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server/server",
+    "client": "npm start --prefix client",
+    "admin": "npm start --prefix admin",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "data:import": "node server/seeders",
+    "data:destroy": "node server/seeders -d"
+  },
+  "author": "Ak",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "colors": "^1.4.0",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.0",
+    "netlify-lambda": "^2.0.15",
+    "passport": "^0.5.0",
+    "passport-github2": "^0.1.12",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-twitter": "^1.0.4",
+    "path": "^0.12.7",
+    "razorpay": "^2.8.3",
+    "serverless-http": "^3.1.1",
+    "stripe": "^10.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "nodemon": "^2.0.19"
+  }
+}
