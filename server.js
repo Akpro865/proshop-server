@@ -33,7 +33,7 @@ app.use(cors({
 	methods: "GET,POST,PUT,DELETE",
 	credentials: true,
 	headers: {
-        "Access-Control-Allow-Origin": "https://slug-panel.onrender.com",
+        "Access-Control-Allow-Origin": process.env.CORS_ORIGIN,
         "Access-Control-Allow-Credentials": true
     },
 }))
