@@ -31,7 +31,11 @@ app.use(passport.session())
 app.use(cors({
 	origin: process.env.CORS_ORIGIN,
 	methods: "GET,POST,PUT,DELETE",
-	credentials: true
+	credentials: true,
+	headers: {
+        "Access-Control-Allow-Origin": "https://slug-panel.onrender.com",
+        "Access-Control-Allow-Credentials": true
+    },
 }))
 
 app.use('/api/products', require('./routes/products'))
