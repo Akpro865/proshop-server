@@ -10,8 +10,6 @@ const { errorHandler, NotFound } = require('./middleware/error')
 const passportSetup = require('./passport')
 const bodyParser = require('body-parser')
 const path = require('path');
-const serverless = require('serverless-http');
-const router = require('express').Router()
 
 connectDB()
 
@@ -34,7 +32,8 @@ app.use(cors({
 	credentials: true,
 	headers: {
         "Access-Control-Allow-Origin": process.env.CORS_ORIGIN,
-        "Access-Control-Allow-Credentials": true
+        "Access-Control-Allow-Credentials": true,
+        "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE OPTIONS"
     },
 }))
 
@@ -46,9 +45,6 @@ app.use('/api/user', require('./routes/user'))
 app.use('/api/orders', require('./routes/orders'))
 app.use('/api/stripe', require('./routes/stripe'))
 app.use('/api/razorpayment', require('./routes/razorpay'))
-
-app.use('/.netlify/functions/api', router)
-module.exports.handler = serverless(app);
 
 app.listen(process.env.PORT || 5000, ()=>{
 	console.log(`app conneced`.brightCyan)
