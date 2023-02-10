@@ -33,10 +33,9 @@ app.use(cors({
 	headers: {
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin": "*",
-    	"Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With, *",
+    	"Access-Control-Allow-Headers": "*",
     	"Access-Control-Allow-Methods": 'GET, POST, DELETE, PUT, *',
-    	"Content-Type": "text/html; charset=utf-8",
-		"Content-Type": "multipart/form-data; boundary=something",
+    	"Content-Type": "application/json"
     }
 }))
 
