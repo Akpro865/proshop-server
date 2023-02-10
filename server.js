@@ -27,16 +27,16 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(cors({
-	origin: process.env.CORS_ORIGIN,
+	origin: "*",
 	methods: "GET,POST,PUT,DELETE",
 	credentials: true,
 	headers: {
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin": "*",
     	"Access-Control-Allow-Headers": "*",
-    	"Access-Control-Allow-Methods": 'GET, POST, DELETE, *',
-    	"Content-Type": "application/json",
-    },
+    	"Access-Control-Allow-Methods": 'GET, POST, DELETE, PUT, *',
+    	"Content-Type": "application/json, application/x-www-form-urlencoded, multipart/form-data, text/plain",
+    }
 }))
 
 app.use('/api/products', require('./routes/products'))
