@@ -35,7 +35,8 @@ app.use(cors({
         "Access-Control-Allow-Origin": "*",
     	"Access-Control-Allow-Headers": "*",
     	"Access-Control-Allow-Methods": 'GET, POST, DELETE, PUT, *',
-    	"Content-Type": "application/json, application/x-www-form-urlencoded, multipart/form-data, text/plain",
+    	"Content-Type": "text/html; charset=utf-8",
+		"Content-Type": "multipart/form-data; boundary=something",
     }
 }))
 
