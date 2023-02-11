@@ -31,8 +31,8 @@ app.use(cors({
 	methods: "GET,POST,PUT,DELETE",
 	credentials: true,
 	// headers: {
-    //     "Access-Control-Allow-Credentials": true,
-    //     "Access-Control-Allow-Origin": "*",
+    //  "Access-Control-Allow-Credentials": true,
+    //  "Access-Control-Allow-Origin": "*",
     // 	"Access-Control-Allow-Headers": "*",
     // 	"Access-Control-Allow-Methods": 'GET, POST, DELETE, PUT, *',
     // 	"Content-Type": "application/json"
