@@ -26,18 +26,18 @@ app.use(cookieSession({
 app.use(passport.initialize())
 app.use(passport.session())
 
-// app.use(cors({
-// 	origin: "*",
-// 	methods: "GET,POST,PUT,DELETE",
-// 	credentials: true,
-// 	headers: {
-//         "Access-Control-Allow-Credentials": true,
-//         "Access-Control-Allow-Origin": "*",
-//     	"Access-Control-Allow-Headers": "*",
-//     	"Access-Control-Allow-Methods": 'GET, POST, DELETE, PUT, *',
-//     	"Content-Type": "application/json"
-//     }
-// }))
+app.use(cors({
+	origin: "*",
+	methods: "GET,POST,PUT,DELETE",
+	credentials: true,
+	// headers: {
+    //     "Access-Control-Allow-Credentials": true,
+    //     "Access-Control-Allow-Origin": "*",
+    // 	"Access-Control-Allow-Headers": "*",
+    // 	"Access-Control-Allow-Methods": 'GET, POST, DELETE, PUT, *',
+    // 	"Content-Type": "application/json"
+    // }
+}))
 
 app.use('/api/products', require('./routes/products'))
 app.use('/api/categories', require('./routes/category'))
