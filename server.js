@@ -26,6 +26,15 @@ app.use(cookieSession({
 app.use(passport.initialize())
 app.use(passport.session())
 
+app.options("/*", function(req, res, next){
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header("Access-Control-Allow-Credentials", 'true');
+  res.header("Content-Type", "application/json");
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+  res.send(200);
+});
+
 app.use(cors({
 	origin: "*",
 	methods: "GET,POST,PUT,DELETE",
